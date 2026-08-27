@@ -14,7 +14,7 @@ Use this skill for grounded research over public YouTube data: find videos, insp
 After the package is pushed, install from the repository root with:
 
 ```bash
-openclaw skills install git:replynodes/replynodes-youtube-api@v1.0.0 --as replynodes-youtube-api
+openclaw skills install git:replynodes/replynodes-youtube-api@main --as replynodes-youtube-api
 ```
 
 Local install from a checkout:

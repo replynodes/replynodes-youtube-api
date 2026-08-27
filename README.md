@@ -19,7 +19,7 @@ Example prompts:
 Git install after publication to GitHub:
 
 ```bash
-openclaw skills install git:replynodes/replynodes-youtube-api@v1.0.0 --as replynodes-youtube-api
+openclaw skills install git:replynodes/replynodes-youtube-api@main --as replynodes-youtube-api
 ```
 
 Local checkout install:
