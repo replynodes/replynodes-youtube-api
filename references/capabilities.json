@@ -1,0 +1,23 @@
+{
+  "name": "replynodes-youtube-api",
+  "version": "1.0.0",
+  "base_url": "https://api.replynodes.com",
+  "discovery": "GET /.well-known/x402.json",
+  "capability_url": "GET /v1/youtube/capabilities",
+  "auth": ["Bearer prepaid credits", "x402 v2"],
+  "x402": {
+    "price_micros": 3000,
+    "price_usd": 0.003,
+    "network": "eip155:8453"
+  },
+  "mode": "readonly",
+  "operations": [
+    {"name":"search","route":"GET /v1/youtube/search","params":["term","language?","limit?"]},
+    {"name":"video","route":"GET /v1/youtube/video/{id}","params":["id","language?"]},
+    {"name":"channel","route":"GET /v1/youtube/channel/{id}","params":["id","language?"]},
+    {"name":"comments","route":"GET /v1/youtube/comments/{id}","params":["id","limit?"]},
+    {"name":"playlist","route":"GET /v1/youtube/playlist/{id}","params":["id","language?"]},
+    {"name":"related","route":"GET /v1/youtube/related/{id}","params":["id","language?"]},
+    {"name":"transcript","route":"GET /v1/youtube/transcript/{id}","params":["id","language?"]}
+  ]
+}
