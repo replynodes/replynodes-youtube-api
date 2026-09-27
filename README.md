@@ -1,6 +1,6 @@
 # replynodes-youtube-api
 
-OpenClaw-installable, read-only public YouTube research skill for the ReplyNodes API.
+OpenClaw-installable, public YouTube research skill for the ReplyNodes MCP.
 
 ## Outcome-led discovery
 
@@ -36,16 +36,29 @@ bash scripts/validate-package.sh
 
 No runtime code, dependencies, secrets, or provider credentials are included.
 
-## API facts
+## Current MCP contract
 
-Base URL: `https://api.replynodes.com`
+Canonical endpoint: `https://mcp.replynodes.com/mcp`
 
-- Discovery: `GET /.well-known/x402.json`
-- Capability URL: `GET /v1/youtube/capabilities`
-- Data routes: seven read-only GET operations documented in `SKILL.md`.
-- Authentication/payment: Bearer prepaid credits or x402 v2. Current production x402 price: 3000 micros ($0.003) per call on Base `eip155:8453`.
+The live MCP exposes these YouTube tools:
 
-The package is a research skill, not a platform-management tool. No write behavior or authenticated provider access is supported.
+- `youtube_search`
+- `youtube_video`
+- `youtube_channel`
+- `youtube_comments`
+- `youtube_playlist`
+- `youtube_related`
+- `youtube_transcript`
+
+Connect with a supported ReplyNodes MCP authentication flow. Headless clients
+may use a ReplyNodes Bearer API key through their secret/environment support.
+Unauthenticated tool use is rejected; discover the live schemas with
+`tools/list` after connecting. This repository documents only the canonical MCP
+endpoint and current tool contract.
+
+The package is a research skill, not a platform-management tool. It does not
+support upload, liking, subscribing, posting comments, account actions, OAuth,
+cookies, sessions, platform credentials, or private data.
 
 ## Growth metadata
 
